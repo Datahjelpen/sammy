@@ -1,1 +1,126 @@
-@import "_config/_getConfig.scss";
+@import "_config/_getConfig.scss";#nav {
+#nav {
+    &-main {
+        @include transition(0.25s);
+        position: fixed;
+        width: 100%;
+        height: $navigation-height;
+        overflow: hidden;
+        background-color: $cGrey;
+        box-shadow: 0 -5px 30px rgba($cBlack, 0.15);
+        z-index: 10;
+
+        ul {
+            li {
+                a {
+                    color: $cBlack;
+
+                    &:focus,
+                    &:hover {
+                        color: $cPrimary;
+                        background-color: $cWhite;
+                    }
+                }
+            }
+        }
+
+        &.transparent {
+            background-color: transparent;
+            box-shadow: 0 -5px 30px rgba($cBlack, 0);
+
+            ul {
+                li {
+                    a {
+                        color: $cWhite;
+
+                        &:focus,
+                        &:hover {
+                            color: $cPrimary;
+                            background-color: $cWhite;
+                        }
+                    }
+                }
+            }
+        }
+
+        &-wrapper {
+            @include clear();
+            display: block;
+        }
+
+        &-logo,
+        &-menu {
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+
+            li {
+                height: $navigation-height;
+                line-height: $navigation-height;
+                text-align: center;
+                vertical-align: middle;
+
+                a {
+                    @include transition(0.25s);
+                    display: block;
+                    height: $navigation-height;
+                    line-height: $navigation-height;
+                    vertical-align: middle;
+
+                    span,
+                    i,
+                    img {
+                        display: inline-block;
+                        height: $navigation-height;
+                    }
+
+                    span,
+                    img {
+                        vertical-align: middle;
+                    }
+
+                    i {
+                        vertical-align: top;
+
+                        &:before {
+                            display: block;
+                            height: $navigation-height;
+                            vertical-align: top;
+                        }
+
+                        &:first-child:last-child {
+                            font-size: $navigation-height/2;
+                        }
+                    }
+                }
+            }
+        }
+
+        &-logo {
+            float: left;
+
+            li {
+                a {
+                    padding: 0 25px;
+                }
+            }
+        }
+
+        &-menu {
+            @include clear();
+            float: right;
+
+            li {
+                float: left;
+
+                a {
+                    padding: 0 25px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: $medium-screen-up) {
+
+}

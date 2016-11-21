@@ -7,10 +7,10 @@
     
     require '../config.php';
 ?>
-    <link rel="stylesheet" href="/_resources/css/index.css">
 </head>
 <body>
     <header class="header center-align space-v-large font-medium">
+    <?php require '_templates/nav.php'; ?>
         <h1 class="no-margin font-thin">SAMMY</h1>
     </header>
     <main class="row">
