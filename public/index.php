@@ -8,14 +8,14 @@
     require '../config.php';
 ?>
 </head>
-<body>
+<body class="bg-animation">
     <?php require '_templates/nav.php'; ?>
-    <header id="intro-header" class="bg-animation center-align space-v-large font-medium">
+    <header id="intro-header" class="center-align space-v-large font-medium">
         <h1 class="no-margin font-thin">SAMMY</h1>
     </header>
-    <main class="grey-bg row">
+    <main class="row">
         <section class="col s12 m6 space-a-small">
-            <header>
+            <header class="center-align">
                 <h2><i class="icon-server-2"></i><span>Droplets</span></h2>
             </header>
             <section class="white-bg space-a-small font-brand">
@@ -32,7 +32,7 @@
             </section>
         </section>
         <section class="col s12 m6 space-a-small">
-            <header>
+            <header class="center-align">
                 <h2><i class="icon-network-2-1"></i><span>Domains</span></h2>
             </header>
             <section class="white-bg space-a-small font-brand">
