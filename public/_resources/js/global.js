@@ -20,11 +20,11 @@
             delayer = setTimeout(function() {
                 var awayFromTop = (window.pageYOffset || document.documentElement.scrollTop)  - (document.documentElement.clientTop || 0);
 
-                if (awayFromTop > 50 && isTransparent) {
+                if (awayFromTop > 300 && isTransparent) {
                     delay *= 2;
                     isTransparent = false;
                     nav.setAttribute("class", navClasses.replace("transparent", ""));
-                } else if (awayFromTop < 50 && !isTransparent) {
+                } else if (awayFromTop < 300 && !isTransparent) {
                     isTransparent = true;
                     nav.setAttribute("class", navClasses);
                     delay = 300;
