@@ -1,4 +1,35 @@
-@import "_config/_getConfig.scss";#nav {
+@import "_config/_getConfig.scss";
+
+body {
+    background-color: $cGrey;
+}
+
+footer {
+    text-align: center;
+}
+
+::-webkit-scrollbar {
+    background-color: $cWhite;
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: darken($cGrey, 25%);
+}
+
+.bg-animation {
+    color: $cWhite;
+    background-size: 300%;
+    background-image: linear-gradient(135deg, lighten($cPrimary, 25%), $cPrimary, darken($cPrimary, 25%));
+    animation: backgroundGradient 60s cubic-bezier(.4,0,.2,1) infinite;
+
+    @keyframes backgroundGradient { 
+        0% {background-position:0% 0%}
+        50% {background-position:100% 50%}
+        100% {background-position:0% 0%}
+    }
+}
+
 #nav {
     &-main {
         @include transition(0.25s);

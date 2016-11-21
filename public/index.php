@@ -9,16 +9,16 @@
 ?>
 </head>
 <body>
-    <header class="header center-align space-v-large font-medium">
     <?php require '_templates/nav.php'; ?>
+    <header id="intro-header" class="bg-animation center-align space-v-large font-medium">
         <h1 class="no-margin font-thin">SAMMY</h1>
     </header>
-    <main class="row">
+    <main class="grey-bg row">
         <section class="col s12 m6 space-a-small">
             <header>
-                <h2>Droplets</h2>
+                <h2><i class="icon-server-2"></i><span>Droplets</span></h2>
             </header>
-            <section class="grey-bg space-a-small">
+            <section class="white-bg space-a-small font-brand">
                 <?php
                     $droplet = $digitalocean->droplet();
                     $droplets = $droplet->getAll();
@@ -33,9 +33,9 @@
         </section>
         <section class="col s12 m6 space-a-small">
             <header>
-                <h2>Domains</h2>
+                <h2><i class="icon-network-2-1"></i><span>Domains</span></h2>
             </header>
-            <section class="grey-bg space-a-small">
+            <section class="white-bg space-a-small font-brand">
                 <?php
                     $domain = $digitalocean->domain();
                     $domains = $domain->getAll();
@@ -49,4 +49,4 @@
             </section>
         </section>
     </main>
-    <?php require_once '_templates/footer.php'; ?>
+<?php require_once '_templates/footer.php'; ?>
