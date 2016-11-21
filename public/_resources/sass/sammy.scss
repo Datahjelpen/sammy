@@ -4,6 +4,47 @@ body {
     background-color: $cGrey;
 }
 
+main {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    .btn {
+        span,
+        i {
+            display: inline-block;
+        }
+
+        span {
+            vertical-align: middle;
+
+            &:first-child {
+                margin-right: 10px;
+            }
+
+            &:last-child {
+                margin-left: 10px;
+            }
+
+            &:first-child:last-child {
+                margin-right: 0;
+                margin-left: 0;
+            }
+        }
+
+        i {
+            vertical-align: top;
+
+            &:before {
+                display: block;
+                vertical-align: top;
+            }
+        }
+    }
+}
+
 footer {
     text-align: center;
 }
@@ -37,7 +78,7 @@ footer {
         width: 100%;
         height: $navigation-height;
         overflow: hidden;
-        background-color: $cGrey;
+        background-color: $cWhite;
         box-shadow: 0 -5px 30px rgba($cBlack, 0.15);
         z-index: 10;
 
