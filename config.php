@@ -6,7 +6,7 @@
 
     // create an adapter with your access token which can be
     // generated at https://cloud.digitalocean.com/settings/applications
-    $token = file_get_contents('../secret.cfg');
+    $token = file_get_contents(__DIR__ . '/secret.cfg');
     $adapter = new BuzzAdapter($token);
 
     // create a digital ocean object with the previous adapter
