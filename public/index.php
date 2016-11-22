@@ -8,9 +8,9 @@
     require '../config.php';
 ?>
 </head>
-<body class="bg-animation">
+<body>
     <?php require '_templates/nav.php'; ?>
-    <header id="intro-header" class="center-align space-v-large font-medium">
+    <header id="intro-header" class="primary-bg center-align space-v-large font-medium">
         <h1 class="no-margin font-thin">SAMMY</h1>
     </header>
     <main class="row">
