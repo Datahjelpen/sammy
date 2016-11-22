@@ -9,8 +9,7 @@ h2,
 h3,
 h4,
 h5,
-h6,
-.btn {
+h6 {
     span,
     i {
         display: inline-block;
@@ -20,11 +19,11 @@ h6,
         vertical-align: middle;
 
         &:first-child {
-            margin-right: 10px;
+            margin-right: 0.5em;
         }
 
         &:last-child {
-            margin-left: 10px;
+            margin-left: 0.5em;
         }
 
         &:first-child:last-child {
@@ -43,7 +42,7 @@ h6,
     }
 }
 
-footer {
+body > footer {
     text-align: center;
 }
 
