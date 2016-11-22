@@ -5,7 +5,7 @@
     // C:\xampp\htdocs\dh\_datahjelpen\tools\sammy\vendor\kriswallsmith\buzz\lib\Buzz\Client\Curl.php
     // 
     
-    require '../config.php';
+    require __DIR__ . '/../config.php';
 ?>
 </head>
 <body>
@@ -20,15 +20,12 @@
             </header>
             <section class="white-bg space-a-small font-brand">
                 <?php
-                    $droplet = $digitalocean->droplet();
-                    $droplets = $droplet->getAll();
-
-                    echo '<ul>';
-                    foreach ($droplets as $droplet) {
-                        echo '<li><a href="/droplets/?id=' . $droplet->id . '">' . $droplet->name . '</a></li>';
-                    }
-                    echo '</ul>';
+                    require 'droplets/get.php';
+                    require 'droplets/info.php';
                 ?>
+                <footer class="space-a-small center-align">
+                    <a href="/droplets/add.php" class="btn accent">Add</a>
+                </footer>
             </section>
         </section>
         <section class="col s12 m6 space-a-small">
@@ -37,15 +34,12 @@
             </header>
             <section class="white-bg space-a-small font-brand">
                 <?php
-                    $domain = $digitalocean->domain();
-                    $domains = $domain->getAll();
-
-                    echo '<ul>';
-                    foreach ($domains as $domain) {
-                        echo '<li><a href="/domains/?name=' . $domain->name . '">' . $domain->name . '</a></li>';
-                    }
-                    echo '</ul>';
+                    require 'domains/get.php';
+                    require 'domains/info.php';
                 ?>
+                <footer class="space-a-small center-align">
+                    <a href="/domains/add.php" class="btn accent">Add</a>
+                </footer>
             </section>
         </section>
     </main>
