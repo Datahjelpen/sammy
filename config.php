@@ -10,6 +10,6 @@
     $adapter = new BuzzAdapter($token);
 
     // create a digital ocean object with the previous adapter
-    $digitalocean = new DigitalOceanV2($adapter);
+    $GLOBALS['digitalocean'] = new DigitalOceanV2($adapter);
 
     require_once 'public/_templates/head.php';
