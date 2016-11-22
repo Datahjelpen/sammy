@@ -1,13 +1,12 @@
 <?php require_once('_templates/head.php'); ?>
-    <link rel="stylesheet" href="/_resources/css/index.css">
 </head>
-<body>
-    <header id="hjem" class="tabs active">
-        <div class="center-v-h center-align">
-            <h1>500</h1>
-        </div>
-    </header>
+<body class="black-bg">
     <?php require_once('_templates/nav.php'); ?>
+    <section class="space-v-large">
+        <div class="space-v-large center-align">
+            <h1 class="no-margin space-v-large font-huge red-text">500</h1>
+        </div>
+    </section>
     <?php require_once('_templates/footer.php'); ?>
 </body>
 </html>
