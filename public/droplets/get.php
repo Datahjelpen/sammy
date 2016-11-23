@@ -19,14 +19,14 @@
 	$cache = generate_cache($cache_check, __DIR__ . '/../.cache/' . $cache_check->type . '-' . $cache_check->get . '.json');
 
 	if (strlen($cache) !== 0) {
-		$droplets = json_decode(file_get_contents($cache));
+		$data = json_decode(file_get_contents($cache));
 	} else {
-		$droplet = $digitalocean->droplet();
+		$data = $digitalocean->droplet();
 
 		if ($requirements_ok) {
 			$droplet_id = htmlspecialchars($_GET['id']);
-			$droplet = $droplet->getByName(htmlspecialchars_decode($droplet_id));
+			$data = $data->getByName(htmlspecialchars_decode($droplet_id));
 		} else {
-			$droplets = $droplet->getAll();
+			$data = $data->getAll();
 		}
 	}

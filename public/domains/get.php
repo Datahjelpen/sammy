@@ -19,14 +19,14 @@
 	$cache = generate_cache($cache_check, __DIR__ . '/../.cache/' . $cache_check->type . '-' . $cache_check->get . '.json');
 
 	if (strlen($cache) !== 0) {
-		$domains = json_decode(file_get_contents($cache));
+		$data = json_decode(file_get_contents($cache));
 	} else {
-		$domain = $digitalocean->domain();
+		$data = $digitalocean->domain();
 
 		if ($requirements_ok) {
 			$domain_name = htmlspecialchars($_GET['name']);
-			$domain = $domain->getByName(htmlspecialchars_decode($domain_name));
+			$data = $data->getByName(htmlspecialchars_decode($domain_name));
 		} else {
-			$domains = $domain->getAll();
+			$data = $data->getAll();
 		}
 	}

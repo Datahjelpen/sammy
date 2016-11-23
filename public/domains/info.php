@@ -3,7 +3,7 @@
     $html .= '<ul>';
 
     if ($single) {
-        foreach ($domain as $key => $value) {
+        foreach ($data as $key => $value) {
             $html .= '<li>' . $key . ': ';
             $html .= '<pre>';
             $html .= var_export($value, true);
@@ -11,7 +11,7 @@
             $html .= '</li>';
         }
     } else {
-        foreach ($domains as $domain) {
+        foreach ($data as $domain) {
             $html .= '<li><a href="/domains/?name=' . $domain->name . '">' . $domain->name . '</a></li>';
         }
     }
