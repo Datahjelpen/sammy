@@ -12,22 +12,12 @@
 			$data = $GLOBALS['digitalocean']->domain();
 
 			if ($cache_check->single) {
-				$data = $data->getById(htmlspecialchars_decode($cache_check->get));
+				$data = $data->getByName(htmlspecialchars_decode($cache_check->get));
 			} else {
 				$data = $data->getAll();
 			}
 		} else if ($cache_check->type === 'droplets') {
 			$data = $GLOBALS['digitalocean']->droplet();
-
-			if ($cache_check->single) {
-				$data = $data->getById(htmlspecialchars_decode($cache_check->get));
-			} else {
-				$data = $data->getAll();
-			}
-		}
-
-		if ($cache_check->type === 'domains') {
-			$data = $GLOBALS['digitalocean']->domain();
 
 			if ($cache_check->single) {
 				$data = $data->getById(htmlspecialchars_decode($cache_check->get));
