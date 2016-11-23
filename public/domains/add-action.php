@@ -1,2 +1,3 @@
 <?php
-    $created = $domain->create('test.com', '127.0.0.1');
+    require_once '../../config.php';
+    require_once __DIR__ . '/functions.php';

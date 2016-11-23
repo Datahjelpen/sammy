@@ -5,7 +5,7 @@
     // C:\xampp\htdocs\dh\_datahjelpen\tools\sammy\vendor\kriswallsmith\buzz\lib\Buzz\Client\Curl.php
     // 
     
-    require __DIR__ . '/../config.php';
+    require_once __DIR__ . '/../config.php';
 ?>
 </head>
 <body>
